@@ -10,9 +10,31 @@
     <title>Hello, world!</title>
 </head>
 <body>
-<div id="app">
-    <h1>{{ message }}</h1>
-    <button @click="openDialog">ファイル選択</button>
+<div id="app" class="container-fluid m-0 p-0 bg-light" style="overflow: hidden;">
+    <nav class="navbar navbar-dark bg-dark">
+        <form class="form-inline" style="color: white;">
+            <a class="m-2 btn btn-outline-primary" @click="loadMusics(true)">フォルダ選択</a>
+            <a class="m-2 btn btn-outline-primary" @click="saveSongInfoList">保存</a>
+        </form>
+    </nav>
+    <div v-for="songInfo in songInfoList" class="m-3 rounded border border-primary shadow-sm bg-white">
+        <p class="text-center">{{ songInfo.name }}</p>
+        <div class="row mx-3">
+            <div v-for="unit in songInfo.units"
+                 class="col-sm m-2 p-1 rounded border border-secondary shadow-sm text-center"
+                 :style="'background-color: ' + typeColor[unit.type] + ';'">
+                <input v-model="unit.str" type="text" class="w-100 text-center">
+                <div class="btn-group btn-group-toggle mt-2" data-toggle="buttons">
+                    <label v-for="attribute in attributes" class="btn btn-secondary btn-sm"
+                           v-bind:class="{ active: unit.type === attribute.value }"
+                           @click="unit.type = attribute.value; previewFilename()">
+                        <input type="radio" autocomplete="off"> {{ attribute.label }}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <p class="text-center">▼<br>{{ songInfo.renameTo }}</p>
+    </div>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "初音ミク",
+    "aliases": ["初音ミク", "ミク"]
+  },
+  {
+    "name": "巡音ルカ",
+    "aliases": ["巡音ルカ", "ルカ"]
+  },
+  {
+    "name": "鏡音リン",
+    "aliases": ["鏡音リン", "リン"]
+  },
+  {
+    "name": "鏡音レン",
+    "aliases": ["鏡音レン", "レン"]
+  },
+  {
+    "name": "KAITO",
+    "aliases": ["KAITO"]
+  },
+  {
+    "name": "MEIKO",
+    "aliases": ["MEIKO"]
+  },
+  {
+    "name": "IA",
+    "aliases": ["IA"]
+  },
+  {
+    "name": "GUMI",
+    "aliases": ["GUMI", "めぐっぽいど"]
+  }
+]

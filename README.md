@@ -1,8 +1,8 @@
-# eel_bootstrap
+# ボカロ曲リネーマー
 
-eelでデスクトップアプリを作るときの小さなテンプレです。
+ボカロ曲のファイル名を変更するGUIアプリケーション（作りかけ）です。
 
-とりあえず（オンラインなら）（最低限）VueとBootstrapが使えるようになっています。
+![](https://user-images.githubusercontent.com/980141/56648114-aaafa280-66bd-11e9-9671-59f09a3cd577.png)
 
 ## 使い方
 
@@ -12,8 +12,3 @@ Python 3.5 以上推奨。
 pip install -r requirements.txt
 python gui.py
 ```
-
-## Tips
-
-* Javascript側のエラーは開いたウィンドウを右クリックして「検証」から見れます
-* Ctrl(Cmd) + Shift + Rでキャッシュ消去 + リロードができます
